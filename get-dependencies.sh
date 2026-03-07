@@ -12,8 +12,7 @@ tee -a /etc/pacman.conf <<EOF
 Include = /etc/pacman.d/mirrorlist
 EOF
 pacman -Syu --noconfirm \
-    lib32-
-    
+    lib32-alsa-plugins
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
