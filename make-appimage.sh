@@ -3,7 +3,7 @@
 set -eu
 
 ARCH=$(uname -m)
-VERSION=$(pacman -Q PACKAGENAME | awk '{print $2; exit}') # example command to get version of application here
+VERSION=$(pacman -Q kega-fusion | awk '{print $2; exit}') # example command to get version of application here
 export ARCH VERSION
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"
