@@ -14,7 +14,7 @@ export DEPLOY_OPENGL=1
 export LIB_DIR=/usr/lib32 
 
 # Deploy dependencies
-quick-sharun /usr/lib/kega-fusion/Fusion
+quick-sharun /usr/bin/kega-fusion /usr/lib/kega-fusion/Fusion
 
 # Additional changes can be done in between here
 
