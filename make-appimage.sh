@@ -14,9 +14,9 @@ export DEPLOY_OPENGL=1
 export LIB_DIR=/usr/lib32 
 
 # Deploy dependencies
-quick-sharun /usr/bin/kega-fusion /usr/lib/kega-fusion/Fusion
+quick-sharun /usr/bin/kega-fusion /usr/lib/kega-fusion
 
-# Additional changes can be done in between here
+sed -i -e 's|/usr|$APPDIR|g' ./AppDir/bin/kega-fusion
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
