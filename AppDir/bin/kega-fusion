@@ -1,0 +1,33 @@
+#!/bin/sh
+
+set -e
+
+prefix=$APPDIR
+libdir=$prefix/lib/kega-fusion
+sharedir=$prefix/share/kega-fusion
+localdir="$HOME/.Kega Fusion"
+
+_copy_plugins() {
+	src_dir=$libdir/plugins
+	dst_dir=$localdir/Plugins
+	mkdir -p "$dst_dir"
+	set -- "$src_dir"/*
+	for f do
+		[ -f "$f" ] || continue
+		[ -e "$dst_dir"/"${##*/f}" ] || ln -sf "$f" "$dst_dir"
+	done
+}
+
+_copy_config() {
+	src_file=$sharedir/Fusion.ini
+	dst_file=$localdir/Fusion.ini
+	mkdir -p "$localdir"
+	[ -f "$dst_file" ] || cp -f "$src_file" "$dst_file"
+	sed -i -e "s|libmpg123path=.*|libmpg123path=$libdir/libmpg123.so.0|" "$dst_file"
+}
+
+_copy_plugins
+_copy_config
+
+exec "$prefix"/bin/Fusion "$@"
+
