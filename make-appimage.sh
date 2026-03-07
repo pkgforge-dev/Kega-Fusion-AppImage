@@ -10,6 +10,7 @@ export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=/usr/share/pixmaps/kega-fusion.png
 export DESKTOP=/usr/share/applications/kega-fusion.desktop
+export STARTUPWMCLASS=Fusion
 export DEPLOY_OPENGL=1
 export LIB_DIR=/usr/lib32
 
