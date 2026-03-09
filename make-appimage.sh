@@ -17,7 +17,7 @@ export LIB_DIR=/usr/lib32
 
 # Deploy dependencies
 mkdir -p ./AppDir/bin
-cp -rnl /usr/lib/kega-fusion/* ./AppDir/bin
+cp -rnL /usr/lib/kega-fusion/* ./AppDir/bin
 quick-sharun ./AppDir/bin/*
 
 # Turn AppDir into AppImage
