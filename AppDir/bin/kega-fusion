@@ -3,12 +3,11 @@
 set -e
 
 prefix=$APPDIR
-libdir=$prefix/lib/kega-fusion
 sharedir=$prefix/share/kega-fusion
 localdir="$HOME/.Kega Fusion"
 
 _copy_plugins() {
-	src_dir=$libdir/plugins
+	src_dir=$prefix/bin/plugins
 	dst_dir=$localdir/Plugins
 	mkdir -p "$dst_dir"
 	set -- "$src_dir"/*
@@ -21,9 +20,10 @@ _copy_plugins() {
 _copy_config() {
 	src_file=$sharedir/Fusion.ini
 	dst_file=$localdir/Fusion.ini
+	libmpg123=$prefix/bin/libmpg123.so.0
 	mkdir -p "$localdir"
 	[ -f "$dst_file" ] || cp -f "$src_file" "$dst_file"
-	sed -i -e "s|libmpg123path=.*|libmpg123path=$libdir/libmpg123.so.0|" "$dst_file"
+	sed -i -e "s|libmpg123path=.*|libmpg123path=$libmpg123|" "$dst_file"
 }
 
 _copy_plugins
