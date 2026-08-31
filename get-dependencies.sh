@@ -40,6 +40,7 @@ echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano gtk2-mini
 
 # Comment this out if you need an AUR package
+make-aur-package lib32-mpg123
 make-aur-package lib32-gtk2
 make-aur-package kega-fusion
 
