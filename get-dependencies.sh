@@ -20,6 +20,8 @@ pacman -Syu --noconfirm \
     lib32-glib2         \
     lib32-glu           \
     lib32-libcups       \
+    lib32-jack2         \
+    lib32-libpulse      \
     lib32-librsvg       \
     lib32-libsm         \
     lib32-libx11        \
@@ -39,6 +41,7 @@ echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano gtk2-mini
 
 # Comment this out if you need an AUR package
+make-aur-package lib32-sdl2
 make-aur-package lib32-mpg123
 make-aur-package lib32-gtk2
 make-aur-package kega-fusion
