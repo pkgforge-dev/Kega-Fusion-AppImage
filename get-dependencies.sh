@@ -12,13 +12,17 @@ tee -a /etc/pacman.conf <<EOF
 Include = /etc/pacman.d/mirrorlist
 EOF
 pacman -Syu --noconfirm \
+    glu                 \
     lib32-alsa-plugins  \
     lib32-atk           \
     lib32-cairo         \
     lib32-gdk-pixbuf2   \
     lib32-glib2         \
+    lib32-glu           \
     lib32-libcups       \
+    lib32-mpg123        \
     lib32-librsvg       \
+    lib32-libsm         \
     lib32-libx11        \
     lib32-libxcomposite \
     lib32-libxcursor    \
