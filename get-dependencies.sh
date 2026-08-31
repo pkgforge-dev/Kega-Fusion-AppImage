@@ -29,11 +29,7 @@ pacman -Syu --noconfirm \
     lib32-libxinerama   \
     lib32-libxrandr     \
     lib32-libxrender    \
-    lib32-pango         \
-    lib32-pipewire-jack \
-    lib32-pipewire      \
-    pipewire-audio      \
-    pipewire-jack
+    lib32-pango
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
